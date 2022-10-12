@@ -118,6 +118,4 @@ function terser(userOptions = {}) {
 }
 
 const _terser = terser;
-export {
-  _terser as terser
-};
+export default _terser;
