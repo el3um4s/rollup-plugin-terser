@@ -1,3 +1,3 @@
 import terserModule from "./rollup-plugin-terser.js";
 
-export const terser = terserModule.terser;
+export default const terser = terserModule.terser;
