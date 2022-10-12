@@ -21,7 +21,7 @@ function terser(userOptions = {}) {
 
     async renderChunk(code, chunk, outputOptions) {
       if (!this.worker) {
-        this.worker = new Worker(require.resolve("./transform.js"), {
+        this.worker = await new Worker(await import("./transform.js"), {
           numWorkers: userOptions.numWorkers,
         });
         this.numOfBundles = 0;
@@ -117,5 +117,4 @@ function terser(userOptions = {}) {
   };
 }
 
-const _terser = terser;
-export default _terser;
+export default terser;
