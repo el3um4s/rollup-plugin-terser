@@ -2,7 +2,7 @@
   "name": "@el3um4s/rollup-plugin-terser",
   "version": "0.1.6",
   "description": "Rollup plugin to minify generated es bundle",
-  "type": "module",
+  "type": "commonjs",
   "main": "rollup-plugin-terser.js",
   "types": "rollup-plugin-terser.d.ts",
   "exports": {
@@ -17,18 +17,17 @@
     "transform.js"
   ],
   "scripts": {
-    "test": "jest",
     "check-updates": "npx npm-check-updates",
     "check-updates:minor": "npx npm-check-updates --target minor",
     "check-updates:patch": "npx npm-check-updates --target patch"
   },
   "homepage": "https://github.com/el3um4s/rollup-plugin-terser",
-  "bugs": {
-    "url": "https://github.com/el3um4s/rollup-plugin-terser/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/el3um4s/rollup-plugin-terser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/el3um4s/rollup-plugin-terser/issues"
   },
   "keywords": [
     "rollup",
@@ -38,18 +37,18 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@babel/code-frame": "^7.18.6",
-    "jest": "^29.1.2",
-    "jest-worker": "^29.1.2",
-    "serialize-javascript": "^6.0.0",
-    "terser": "^5.15.1"
+    "@babel/code-frame": "^7.10.4",
+    "jest-worker": "^26.2.1",
+    "serialize-javascript": "^4.0.0",
+    "terser": "^5.0.0"
   },
   "peerDependencies": {
     "rollup": ">=1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3",
-    "prettier": "^2.7.1",
-    "rollup": ">=1.0.0"
+    "@babel/core": "^7.11.1",
+    "jest": "^26.2.2",
+    "prettier": "^2.0.5",
+    "rollup": "=>1.0.0"
   }
 }

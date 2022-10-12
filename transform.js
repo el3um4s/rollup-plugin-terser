@@ -1,14 +1,8 @@
-import {
-  minify
-} from "terser";
+const { minify } = require("terser");
 
-const transform = async (code, optionsString) => {
+const transform = (code, optionsString) => {
   const options = eval(`(${optionsString})`);
-  const result = await minify(code, options);
-  return ({
-    result,
-    nameCache: options.nameCache
-  });
+  return minify(code, options).then(result => ({ result, nameCache: options.nameCache }));
 };
 
-export default transform;
+exports.transform = transform;
