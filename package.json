@@ -17,6 +17,8 @@
     "transform.js"
   ],
   "scripts": {
+    "test": "jest",
+    "prepublish": "npm test",
     "check-updates": "npx npm-check-updates",
     "check-updates:minor": "npx npm-check-updates --target minor",
     "check-updates:patch": "npx npm-check-updates --target patch"
